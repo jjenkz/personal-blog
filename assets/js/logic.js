@@ -13,9 +13,9 @@ themeSwitcher.addEventListener("click", function () {
   }
 });
 
-const userData = localStorage.getItem("userData");
-const userDataObject = JSON.parse(userData);
+const randomUserData = localStorage.getItem("randomUserData");
+const userDataObject = JSON.parse(randomUserData);
 
-// userName.textContent = userDataObject.userName;
-// blogTitle.textContent = userDataObject.userTitle;
-// blogContent.textContent = userDataObject.userContent;
+// document.getElementById("user-name").textContent = userDataObject.name;
+// document.getElementById("blog-title").textContent = userDataObject.title;
+// document.getElementById("blog-content").textContent = userDataObject.content;
