@@ -4,27 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/blog.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Blog Content</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <button type="button" class="button">
-          <a
-            href="file:///C:/Users/Jacob%20Jenkins/Desktop/modules-hmwk/personal-blog/personal-blog/index.html?user-name=&blog-title=&blog-content="
-            >Write More!</a
-          >
-        </button>
-        <!-- light/dark mode will go here -->
-      </nav>
-    </header>
+    <div class="container dark">
+      <header>
+        <nav>
+          <button type="button" class="button">
+            <a
+              href="file:///C:/Users/Jacob%20Jenkins/Desktop/modules-hmwk/personal-blog/personal-blog/index.html?user-name=&blog-title=&blog-content="
+              >Write More!</a
+            >
+          </button>
+          <!-- light/dark mode will go here -->
+          <div class="row toggle">
+            <div class="col">
+              <p>DARK MODE</p>
+            </div>
+            <label class="switch col">
+              <input type="checkbox" id="theme-switcher" />
+              <span class="slider round"></span>
+            </label>
+            <div class="col">
+              <p>LIGHT MODE</p>
+            </div>
+          </div>
+        </nav>
+      </header>
 
-    <div class="blog-content"></div>
+      <div class="main-content"></div>
 
-    <footer>
-      <h3>Made by jjenkz</h3>
-      <!-- links will go here -->
-    </footer>
+      <footer>
+        <h3>Made by jjenkz</h3>
+        <!-- links will go here -->
+      </footer>
+    </div>
     <script src="./assets/js/blog.js"></script>
+    <script src="./assets/js/logic.js"></script>
   </body>
 </html>

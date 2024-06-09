@@ -1,23 +1,21 @@
-const userName = document.querySelector("#user-name");
-const blogTitle = document.querySelector("#blog-title");
-const blogContent = document.querySelector("#blog-content");
-const submitButton = document.querySelector("#submit-button");
+const themeSwitcher = document.querySelector("#theme-switcher");
+const container = document.querySelector(".container");
 
-let info = localStorage.getItem("info");
+let mode = "dark";
 
-submitButton.addEventListener("click", function () {
-  if (userName > 0 && blogTitle > 0 && blogContent > 0) {
-    localStorage.setItem("info", info);
+themeSwitcher.addEventListener("click", function () {
+  if (mode === "dark") {
+    mode = "light";
+    container.setAttribute("class", "light");
   } else {
-    return false;
+    mode = "dark";
+    container.setAttribute("class", "dark");
   }
 });
 
-// const user = {
-//   userNameInput: " ",
-//   blogTitleInput: " ",
-//   blogContentInput: " ",
-// };
+const userData = localStorage.getItem("userData");
+const userDataObject = JSON.parse(userData);
 
-// const userData = JSON.stringify(user);
-// localStorage.setItem("user", "userData");
+// userName.textContent = userDataObject.userName;
+// blogTitle.textContent = userDataObject.userTitle;
+// blogContent.textContent = userDataObject.userContent;
