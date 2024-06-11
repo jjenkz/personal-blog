@@ -63,3 +63,18 @@
 .col {
   margin: 20px;
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  margin: 2px;
+  padding: 2px;
+  border: 2px groove;
+}
+
+.blog-text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: crimson;
+  font-size: 12px;
+  font-weight: 400;
+}

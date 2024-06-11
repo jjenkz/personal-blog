@@ -13,11 +13,10 @@ form.addEventListener("submit", function (event) {
     const userForm = Object.fromEntries(formData);
 
     const userDataJSON = JSON.stringify(userForm);
-    localStorage.setItem("randomUserData", userDataJSON);
+    localStorage.setItem("blogData", userDataJSON);
+
+    console.log("User info saved to local storage", userForm);
   }
 
-  window.location.href =
-    "file:///C:/Users/Jacob%20Jenkins/Desktop/modules-hmwk/personal-blog/personal-blog/blog.html";
-
-  console.log("User info saved to local storage", userForm);
+  window.location.href = "blog.html";
 });

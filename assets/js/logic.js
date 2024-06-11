@@ -13,8 +13,15 @@ themeSwitcher.addEventListener("click", function () {
   }
 });
 
-const randomUserData = localStorage.getItem("randomUserData");
-const userDataObject = JSON.parse(randomUserData);
+function storeData() {
+  const dataArray = [];
+  const formData = new FormData(form);
+  const userForm = Object.fromEntries(formData);
+  console.log(userForm);
+  dataArray.push(userForm);
+  const data = JSON.stringify(dataArray);
+  localStorage.setItem("blogData", data);
+}
 
 // document.getElementById("user-name").textContent = userDataObject.name;
 // document.getElementById("blog-title").textContent = userDataObject.title;
