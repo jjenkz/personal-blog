@@ -16,7 +16,7 @@ function displayBlogPosts() {
     console.log(blogPostEl);
 
     //create elements for the blog post
-    const nameEl = document.createElement("h3");
+    const nameEl = document.createElement("h1");
     nameEl.textContent = currentPost["user-name"];
     console.log(nameEl);
 

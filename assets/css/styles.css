@@ -1,7 +1,26 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  border-bottom: 5px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.openingIMG {
+  border-top: 5px solid black;
+  margin-top: 5px;
+}
+
 .toggle {
   border-style: outset;
-  width: 400px;
-  background-color: rgba(76, 175, 80, 0.15);
+  width: 270px;
+  height: 90px;
+  background-color: rgba(14, 190, 20, 0.849);
 }
 
 /* Dark Mode */
@@ -12,7 +31,7 @@
 }
 
 .light {
-  background-color: #f0ead6;
+  background-color: #ffffff;
   color: black;
   height: 100vh;
 }
@@ -49,7 +68,7 @@
 }
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 30px;
 }
 
 .slider.round:before {
