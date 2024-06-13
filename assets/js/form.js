@@ -1,4 +1,5 @@
 const form = document.getElementById("userData");
+console.log(form);
 const button = document.getElementById("submit-button");
 
 button.addEventListener("click", function (event) {

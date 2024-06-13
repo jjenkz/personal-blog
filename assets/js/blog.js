@@ -3,6 +3,10 @@ const mainContent = document.getElementById("main-content");
 
 function displayBlogPosts() {
   let blogData = JSON.parse(localStorage.getItem("blogData"));
+  if (!blogData) {
+    return;
+  }
+  const mainContent = document.getElementById("main-content");
 
   console.log("Retrieving data from the local storage", blogData);
 
@@ -29,11 +33,12 @@ function displayBlogPosts() {
     console.log(contentEl);
 
     // append nameEL, titleEl and contentEl to blogPostEl
-    mainContent.appendChild(blogPostEl);
+    // mainContent.appendChild(blogPostEl);
     blogPostEl.appendChild(nameEl);
     blogPostEl.appendChild(titleEl);
     blogPostEl.appendChild(contentEl);
     //append article to main content
+    mainContent.appendChild(blogPostEl);
   }
 }
 

@@ -14,15 +14,27 @@ themeSwitcher.addEventListener("click", function () {
 });
 
 function storeData() {
-  const dataArray = [];
-  const formData = new FormData(form);
+  const formData = new FormData(form); //no idea what this does - provided by tutor
   const userForm = Object.fromEntries(formData);
-  console.log(userForm);
-  dataArray.push(userForm);
-  const data = JSON.stringify(dataArray);
-  localStorage.setItem("blogData", data);
-}
 
-// document.getElementById("user-name").textContent = userDataObject.name;
-// document.getElementById("blog-title").textContent = userDataObject.title;
-// document.getElementById("blog-content").textContent = userDataObject.content;
+  //read from Local storage - store in array - parse it
+  //push to new array
+  //strignify and store in local storage
+
+  console.log(userForm);
+  const blogData = readFromStorage();
+  blogData.push(userForm);
+  const data = JSON.stringify(blogData);
+  localStorage.setItem("blogData", data);
+
+  function readFromStorage() {
+    const data = localStorage.getItem("blogData");
+    const newData = JSON.parse(data);
+
+    return newData || [];
+  }
+
+  // dataArray.push(userForm);
+  // const data = JSON.stringify(dataArray);
+  // localStorage.setItem("blogData", data);
+}
