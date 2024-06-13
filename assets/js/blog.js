@@ -11,7 +11,7 @@ function displayBlogPosts() {
     console.log(currentPost);
 
     const blogPostEl = document.createElement("article");
-    blogPostEl.setAttribute("id", "blog-post-" + i);
+    blogPostEl.setAttribute("id", "blog-post-");
     blogPostEl.classList.add("flex-row", "blog-text");
     console.log(blogPostEl);
 

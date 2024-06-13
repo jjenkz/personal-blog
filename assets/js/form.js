@@ -1,6 +1,7 @@
 const form = document.getElementById("userData");
+const button = document.getElementById("submit-button");
 
-form.addEventListener("submit", function (event) {
+button.addEventListener("click", function (event) {
   let userName = document.getElementById("user-name").value;
   let blogTitle = document.getElementById("blog-title").value;
   let blogContent = document.getElementById("blog-content").value;
